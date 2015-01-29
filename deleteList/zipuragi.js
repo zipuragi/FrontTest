@@ -1,16 +1,16 @@
 $(document).ready(function(){
   $("button[name=listRender]").click(function(){
     $("table[name=table01] tbody tr").remove();
-    _.each(data,funtion(obj){
+    _.each(data,function(obj){
 
       var $tr = $("<tr>"
-        + "<td>" + obj._id + "</td>"
-        + "<td>" + obj.menu + "</td>"
-        + "<td>" + obj.price + "</td>"
-        + "<td>" + obj.quantity + "</td>"
-        // 목록에 삭제 버튼 추가
-        + "<td><button class='btn btn-sm btn-primary' name='btnDel'><i class='glyphicon glyphicon-trash'></i> 삭제</button></td>"
-        + "</tr>"
+          + "<td>" + obj._id + "</td>"
+          + "<td>" + obj.menu + "</td>"
+          + "<td>" + obj.price + "</td>"
+          + "<td>" + obj.quantity + "</td>"
+            // 목록에 삭제 버튼 추가
+          + "<td><button class='btn btn-sm btn-primary' name='btnDel'><i class='glyphicon glyphicon-trash'></i> 삭제</button></td>"
+          + "</tr>"
       );
 
       $tr.appendTo("table[name=table01] tbody");
