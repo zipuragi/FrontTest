@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("button[name=listRender]").click(function(){
     $("table[name=table01] tbody tr").remove();
-
+    //수정사항 반영되는지 테스트
     _.each(data,function(obj){
 
       var $tr = $("<tr>"
