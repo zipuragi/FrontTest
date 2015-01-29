@@ -1,14 +1,14 @@
 $(document).ready(function(){
   $("button[name=listRender]").click(function(){
     $("table[name=table01] tbody tr").remove();
-    //수정사항 반영되는지 테스트
-    _.each(data,function(obj){
+    _.each(data,funtion(obj){
 
       var $tr = $("<tr>"
         + "<td>" + obj._id + "</td>"
         + "<td>" + obj.menu + "</td>"
         + "<td>" + obj.price + "</td>"
         + "<td>" + obj.quantity + "</td>"
+        // 목록에 삭제 버튼 추가
         + "<td><button class='btn btn-sm btn-primary' name='btnDel'><i class='glyphicon glyphicon-trash'></i> 삭제</button></td>"
         + "</tr>"
       );
@@ -16,7 +16,12 @@ $(document).ready(function(){
       $tr.appendTo("table[name=table01] tbody");
     });
 
-    $("button[name=btnDel]").click(function(){
+    $("button[name=btnDel]").click(function(){ //btnDel 이름을 가진 버튼 요소를 찾는다.
+      //여기서 this는 button 자신을 가리킴
+      //parent()는 상위 개체를 찾아가는 함수
+      //아래 소스는 button을 찾아서 상위로 두개 위의 개체를 선택해서 지우라는 의미
+      //위쪽 button 태그 바로 위는 <td>태그이고 그 위는 <tr> 태그임
+      //그 위치에서 remove()를 실행하니 tr 태그가 지워지면서 목록 한개가 지워지는 효과가 생김
       $(this).parent().parent().remove();
     });
   });
