@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var self;
+	var self; 
 
 	// 어플리케이션 객체 정의
 	var app = {
