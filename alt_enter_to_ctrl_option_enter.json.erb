@@ -1,0 +1,15 @@
+{
+    "title": "Shift Option + Enter(Return) to ignore",
+    "rules": [
+        {
+            "description": "Shift Option + Enter(Return) to Control + Option + Enter",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": <%= from("return_or_enter", ["left_option"], ["any"]) %>,
+                    "to": <%= to([["left_control", ["left_option", "return_or_enter"]]]) %>
+                }
+            ]
+        }
+    ]
+}
