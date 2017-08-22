@@ -1,33 +1,30 @@
 {
-    "title": "Shift Option + Enter(Return) to ignore",
-    "rules": [
+  "title": "Personal rules (@rubocoptero)",
+  "rules": [
+    {
+      "description": "Change right_option to shift+control+f13",
+      "manipulators": [
         {
-            "description": "Shift Option + Enter(Return) to Control + Option + Enter",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-           				 "key_code": "return_or_enter",
-				            "modifiers": {
-				              	"mandatory": [
-				                "left_option"
-				              ],
-				              "optional": ["any"]
-				            }
-          				},
-          			"to": [
-          				{
-           				 "key_code": "return_or_enter",
-				            "modifiers": {
-				              	"mandatory": [
-				                "left_option",
-				                "return_or_enter"
-				              ]
-				            }
-          				}
-          			]
-                }
-            ]
+          "type": "basic",
+          "from": {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f13",
+              "modifiers": [
+                "left_shift",
+                "left_control"
+              ]
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }
