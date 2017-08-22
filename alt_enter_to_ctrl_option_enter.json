@@ -15,7 +15,8 @@
 				              "optional": ["any"]
 				            }
           				}
-          			"to": {
+          			"to": [
+          				{
            				 "key_code": "return_or_enter",
 				            "modifiers": {
 				              	"mandatory": [
